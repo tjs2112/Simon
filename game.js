@@ -4,7 +4,7 @@ var userClickedPattern = [];
 var level = 0;
 var started = false;
 
-$(document).on("tap", function () {
+$(document).on("vclick", function () {
   if (!started) {
     started = true;
     nextSequence()
