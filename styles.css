@@ -1,18 +1,27 @@
 body {
   text-align: center;
+  background-color: #011F3F;
 }
 
-.top-section {
+.row {
   margin: auto;
-  height: 20%;
+  width: 50%;
+}
+.game-button {
+  font-size: 6rem;
+  color: #fff;
+  border-color: #000;
+  border-radius: 10%;
+  border-width: 5px;
+  padding: 3%;
+  width: 40%;
 }
 
-.middle-section {
-  margin: auto;
-  height: 60%;
+#blue {
+  background-color: #00f;
 }
 
-.bottom-section {
-  margin: auto;
-  height: 20%;
+#red {
+  background-color: #f00;
+
 }
