@@ -11,7 +11,7 @@ body {
 }
 
 .container-fluid {
-  display: block;
+  /* display: block; */
   width: 50%;
   margin: auto;
 
@@ -19,7 +19,7 @@ body {
 
 .btn {
   margin: 25px;
-  display: inline-block;
+  /* display: inline-block; */
   height: 175px;
   width: 175px;
   border: 10px solid black;
