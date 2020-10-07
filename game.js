@@ -4,6 +4,15 @@ var userClickedPattern = [];
 var level = 0;
 var started = false;
 
+$(document).tap(function () {
+  if (!started) {
+    started = true;
+    nextSequence()
+
+  }
+
+})
+
 // listen for color clicks
 $(".btn").click(function(e) {
   var userChosenColor = e.currentTarget.classList[1];
