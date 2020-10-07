@@ -24,6 +24,15 @@ $(document).keydown(function () {
 
 })
 
+$(document).click(function () {
+  if (!started) {
+    started = true;
+    nextSequence()
+
+  }
+
+})
+
 function nextSequence() {
   userClickedPattern = [];
   level++;
