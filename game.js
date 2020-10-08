@@ -4,17 +4,17 @@ var userClickedPattern = [];
 var level = 0;
 var started = false;
 
-$(document).on("vclick", function () {
+$(".start-button").click(function () {
   if (!started) {
     started = true;
+    $(".start-button").css("visibility", "hidden");
     nextSequence()
-
   }
 
 })
 
 // listen for color clicks
-$(".btn").click(function(e) {
+$(".game-button").click(function(e) {
   var userChosenColor = e.currentTarget.classList[1];
   userClickedPattern.push(userChosenColor);
   playSound(userChosenColor);
@@ -24,23 +24,23 @@ $(".btn").click(function(e) {
 })
 
 //listen for any key to Start
-$(document).keydown(function () {
-  if (!started) {
-    started = true;
-    nextSequence()
+// $(document).keydown(function () {
+//   if (!started) {
+//     started = true;
+//     nextSequence()
+//
+//   }
+//
+// })
 
-  }
-
-})
-
-$(document).click(function () {
-  if (!started) {
-    started = true;
-    nextSequence()
-
-  }
-
-})
+// $(document).click(function () {
+//   if (!started) {
+//     started = true;
+//     nextSequence()
+//
+//   }
+//
+// })
 
 function nextSequence() {
   userClickedPattern = [];
@@ -51,8 +51,6 @@ function nextSequence() {
   var randomColor = buttonColors[randomNumber];
 
   gamePattern.push(randomColor);
-  console.log(gamePattern);
-  console.log(userClickedPattern);
 
   setTimeout(function () {
 
@@ -61,7 +59,7 @@ function nextSequence() {
 
     // flash the button
     animatePress(randomColor);
-  }, 1000);
+  }, 500);
 }
 
 function checkAnswer(currentLevel) {
@@ -82,7 +80,8 @@ function checkAnswer(currentLevel) {
     $("h1").text("Game Over");
     setTimeout(function () {
       $("h1").text("Press Any Key to Start");
-    }, 3000);
+      $(".start-button").css("visibility", "visible");
+    }, 1500);
     startOver();
   }
 }

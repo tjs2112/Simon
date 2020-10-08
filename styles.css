@@ -35,18 +35,29 @@ body {
   width: 250px
 }
 
-#blue {
+.blue {
   background-color: #00f;
 }
 
-#red {
+.red {
   background-color: #f00;
 }
 
-#green {
+.green {
   background-color: #0f0;
 }
 
-#yellow {
+.yellow {
   background-color: #ff0;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+
 }
