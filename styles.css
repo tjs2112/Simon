@@ -5,16 +5,17 @@ body {
 
 .row {
   margin: auto;
-  width: 50%;
 }
+
 .game-button {
-  font-size: 6rem;
-  color: #fff;
+  font-size: 8rem;
+  color: #000;
   border-color: #000;
   border-radius: 10%;
-  border-width: 5px;
-  padding: 3%;
-  width: 40%;
+  border-width: 10px;
+  height: 250px;
+  margin: 10px;
+  width: 250px
 }
 
 #blue {
@@ -23,5 +24,12 @@ body {
 
 #red {
   background-color: #f00;
+}
 
+#green {
+  background-color: #0f0;
+}
+
+#yellow {
+  background-color: #ff0;
 }
